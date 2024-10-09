@@ -1,18 +1,23 @@
 import {
+  Image,
   SafeAreaView,
+  ScrollView,
   StyleSheet,
   Text,
   View,
   useColorScheme,
 } from 'react-native';
 import React from 'react';
+import {Colors} from '../utils/colors';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Home Screen</Text>
-      </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <View>
+          <Image source={require('../assets/logo.png')} style={styles.logo} />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -20,20 +25,12 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    backgroundColor: Colors.white,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  logo: {
+    height: 40,
+    width: 140,
   },
 });

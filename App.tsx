@@ -27,10 +27,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/screen/HomeScreen';
+import {enableScreens} from 'react-native-screens';
 
 const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
+  enableScreens();
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {

@@ -23,6 +23,10 @@ target 'LoginBasic' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'react-native-screens', :path => '../node_modules/react-native-screens'
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+
   target 'LoginBasicTests' do
     inherit! :complete
     # Pods for testing
