@@ -23,18 +23,6 @@ const HomeScreen = () => {
             eiusmod tempor incididunt ut labore et dolore 
           </Text>
         </View>
-        {/* <View style={{flex: 1, alignItems: 'center'}}>
-          <Image source={require('../assets/man.png')} style={styles.banner} />
-        </View>
-        <View>
-          <Text style={styles.title}>Lorem ipsum dolor.</Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore 
-          </Text>
-        </View> */}
       </ScrollView>
     </SafeAreaView>
   );
