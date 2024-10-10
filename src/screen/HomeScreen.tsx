@@ -14,10 +14,16 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View style={{flex: 1, alignItems: 'center'}}>
+        <View style={styles.commonView}>
           <Image source={require('../assets/logo.png')} style={styles.logo} />
+          <Image source={require('../assets/man.png')} style={styles.banner} />
+          <Text style={styles.title}>Lorem ipsum dolor.</Text>
+          <Text style={{padding: 10}}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore 
+          </Text>
         </View>
-        <View style={{flex: 1, alignItems: 'center'}}>
+        {/* <View style={{flex: 1, alignItems: 'center'}}>
           <Image source={require('../assets/man.png')} style={styles.banner} />
         </View>
         <View>
@@ -28,7 +34,7 @@ const HomeScreen = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore 
           </Text>
-        </View>
+        </View> */}
       </ScrollView>
     </SafeAreaView>
   );
@@ -40,6 +46,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.white,
+  },
+  commonView: {
+    flex: 1,
+    alignItems: 'center',
   },
   logo: {
     height: 40,
