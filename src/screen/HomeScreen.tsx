@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {Colors} from '../utils/colors';
+import {Fonts} from '../utils/fonts';
 
 const HomeScreen = () => {
   return (
@@ -51,9 +52,11 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   title: {
-    fontFamily: 'Poppins',
-    fontSize: 30,
+    fontFamily: Fonts.SemiBold,
+    fontSize: 36,
     fontWeight: 600,
     textAlign: 'center',
+    paddingHorizontal: 36,
+    color: Colors.primary,
   },
 });
