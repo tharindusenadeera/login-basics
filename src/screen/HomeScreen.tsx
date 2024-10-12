@@ -4,6 +4,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
   useColorScheme,
 } from 'react-native';
@@ -19,10 +20,18 @@ const HomeScreen = () => {
           <Image source={require('../assets/logo.png')} style={styles.logo} />
           <Image source={require('../assets/man.png')} style={styles.banner} />
           <Text style={styles.title}>Lorem ipsum dolor.</Text>
-          <Text style={{padding: 10}}>
+          <Text style={styles.subTitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore 
           </Text>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity>
+              <Text>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>Signup</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -58,5 +67,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 36,
     color: Colors.primary,
+    marginTop: 40,
+  },
+  subTitle: {
+    fontSize: 18,
+    fontFamily: Fonts.Medium,
+    color: Colors.secondary,
+    paddingHorizontal: 30,
+    textAlign: 'center',
+    marginVertical: 20,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    marginTop: 20,
   },
 });
