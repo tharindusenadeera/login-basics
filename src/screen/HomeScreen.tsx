@@ -25,11 +25,11 @@ const HomeScreen = () => {
             eiusmod tempor incididunt ut labore et dolore 
           </Text>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity>
-              <Text>Login</Text>
+            <TouchableOpacity style={styles.loginButtonWrapper}>
+              <Text style={styles.loginButtonText}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Text>Signup</Text>
+            <TouchableOpacity style={styles.signupButtonWrapper}>
+              <Text style={styles.signupButtonText}>Signup</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -80,5 +80,31 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     marginTop: 20,
+    borderWidth: 1,
+    borderColor: Colors.secondary,
+    width: '80%',
+    height: 60,
+    borderRadius: 100,
+  },
+  loginButtonWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '50%',
+    backgroundColor: Colors.primary,
+    borderRadius: 98,
+  },
+  loginButtonText: {
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: Fonts.SemiBold,
+  },
+  signupButtonWrapper: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '50%',
+  },
+  signupButtonText: {
+    fontSize: 18,
+    fontFamily: Fonts.SemiBold,
   },
 });
