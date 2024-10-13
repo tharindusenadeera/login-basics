@@ -28,6 +28,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/screen/HomeScreen';
 import {enableScreens} from 'react-native-screens';
+import LoginScreen from './src/screen/LoginScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,7 @@ function App(): React.JSX.Element {
           headerShown: false,
         }}>
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

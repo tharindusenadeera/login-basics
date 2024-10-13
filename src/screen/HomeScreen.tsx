@@ -11,8 +11,14 @@ import {
 import React from 'react';
 import {Colors} from '../utils/colors';
 import {Fonts} from '../utils/fonts';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
+  const navigation: any = useNavigation();
+
+  const handleLogin = () => {
+    navigation.navigate('Login');
+  };
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
@@ -25,7 +31,9 @@ const HomeScreen = () => {
             eiusmod tempor incididunt ut labore et dolore 
           </Text>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.loginButtonWrapper}>
+            <TouchableOpacity
+              style={styles.loginButtonWrapper}
+              onPress={handleLogin}>
               <Text style={styles.loginButtonText}>Login</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.signupButtonWrapper}>
