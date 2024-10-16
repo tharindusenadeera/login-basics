@@ -12,12 +12,16 @@ import {
 import AntDesign from 'react-native-vector-icons/AntDesign';
 //@ts-ignore
 import Ionicons from 'react-native-vector-icons/Ionicons';
+//@ts-ignore
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import {Colors} from '../utils/colors';
 import {useNavigation} from '@react-navigation/native';
 import {Fonts} from '../utils/fonts';
+import {useState} from 'react';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
+  const [secureEntry, setSecureEntry] = useState(true);
   const handleRedirect = () => {
     navigation.goBack();
   };
@@ -40,10 +44,20 @@ const LoginScreen = () => {
             <TextInput
               style={styles.textInput}
               placeholder="Enter your email"
+              keyboardType="email-address"
             />
           </View>
-          <View>
-            <TextInput />
+          <View style={styles.textInputContainer}>
+            <SimpleLineIcons name="lock" size={25} color={Colors.secondary} />
+            <TextInput
+              secureTextEntry={secureEntry}
+              style={styles.textInput}
+              placeholder="Enter your password"
+            />
+            <TouchableOpacity
+              onPress={() => setSecureEntry((prev: boolean) => !prev)}>
+              <Ionicons name="eye-outline" size={25} color={Colors.secondary} />
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -59,7 +73,6 @@ const styles = StyleSheet.create({
   },
   backButtonWrapper: {
     marginVertical: 20,
-
     height: 50,
     width: 50,
     backgroundColor: Colors.gray,
@@ -88,6 +101,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     height: 55,
     alignItems: 'center',
+    marginVertical: 10,
   },
   textInput: {
     flex: 1,
