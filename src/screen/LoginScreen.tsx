@@ -60,6 +60,26 @@ const LoginScreen = () => {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={styles.forgotPasswordWrapper}>
+          <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+        </View>
+        <View style={styles.loginButtonWrapper}>
+          <TouchableOpacity style={styles.loginButton}>
+            <Text style={styles.loginText}>Login</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.continueContainer}>
+          <Text style={styles.continueText}>or continue with</Text>
+        </View>
+        <View style={styles.googleButtonWrapper}>
+          <TouchableOpacity>
+            <Text style={styles.googleText}>Google</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.createAccountWrapper}>
+          <Text style={styles.createAccountText}>Don’t have an account?</Text>
+          <Text style={styles.createAccount}>Sign up</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -109,5 +129,65 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.Light,
     fontWeight: 300,
     fontSize: 14,
+  },
+  forgotPasswordWrapper: {
+    marginHorizontal: 10,
+    marginVertical: 20,
+  },
+  forgotPasswordText: {
+    fontFamily: Fonts.SemiBold,
+    color: Colors.primary,
+    fontWeight: 600,
+    fontSize: 16,
+    textAlign: 'right',
+  },
+  loginButtonWrapper: {
+    borderWidth: 1,
+    borderRadius: 90,
+    height: 55,
+    backgroundColor: Colors.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loginButton: {},
+  loginText: {
+    color: Colors.white,
+    fontFamily: Fonts.Bold,
+    fontSize: 16,
+    fontWeight: 700,
+  },
+  googleButtonWrapper: {
+    borderWidth: 1,
+    borderRadius: 90,
+    height: 55,
+    borderColor: Colors.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  googleText: {
+    color: Colors.primary,
+    fontFamily: Fonts.SemiBold,
+    fontWeight: 600,
+  },
+  continueContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 20,
+  },
+  continueText: {
+    color: Colors.primary,
+    fontFamily: Fonts.Light,
+  },
+  createAccountWrapper: {
+    flexDirection: 'row',
+    marginVertical: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  createAccountText: {
+    fontFamily: Fonts.Light,
+  },
+  createAccount: {
+    fontFamily: Fonts.Bold,
   },
 });
