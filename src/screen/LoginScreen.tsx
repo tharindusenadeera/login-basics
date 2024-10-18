@@ -21,11 +21,17 @@ import {Fonts} from '../utils/fonts';
 import {useState} from 'react';
 
 const LoginScreen = () => {
-  const navigation = useNavigation();
+  const navigation: any = useNavigation();
   const [secureEntry, setSecureEntry] = useState(true);
+
   const handleRedirect = () => {
     navigation.goBack();
   };
+
+  const navigateSignup = () => {
+    navigation.navigate('Signup');
+  };
+
   return (
     <SafeAreaView>
       <ScrollView
@@ -83,7 +89,9 @@ const LoginScreen = () => {
         </View>
         <View style={styles.createAccountWrapper}>
           <Text style={styles.createAccountText}>Don’t have an account?</Text>
-          <Text style={styles.createAccount}>Sign up</Text>
+          <TouchableOpacity onPress={navigateSignup}>
+            <Text style={styles.createAccount}>Sign up</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

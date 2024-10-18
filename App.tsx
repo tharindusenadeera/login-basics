@@ -29,6 +29,7 @@ import {
 import HomeScreen from './src/screen/HomeScreen';
 import {enableScreens} from 'react-native-screens';
 import LoginScreen from './src/screen/LoginScreen';
+import SignupScreen from './src/screen/SignupScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +49,7 @@ function App(): React.JSX.Element {
         }}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Signup" component={SignupScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
