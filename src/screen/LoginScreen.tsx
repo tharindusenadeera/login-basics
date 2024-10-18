@@ -1,4 +1,5 @@
 import {
+  Image,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -72,7 +73,11 @@ const LoginScreen = () => {
           <Text style={styles.continueText}>or continue with</Text>
         </View>
         <View style={styles.googleButtonWrapper}>
-          <TouchableOpacity>
+          <TouchableOpacity style={styles.googleButtonWrapperTouch}>
+            <Image
+              source={require('../assets/google-icon.png')}
+              style={styles.googleImage}
+            />
             <Text style={styles.googleText}>Google</Text>
           </TouchableOpacity>
         </View>
@@ -164,6 +169,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  googleButtonWrapperTouch: {
+    flexDirection: 'row',
+  },
   googleText: {
     color: Colors.primary,
     fontFamily: Fonts.SemiBold,
@@ -186,8 +194,14 @@ const styles = StyleSheet.create({
   },
   createAccountText: {
     fontFamily: Fonts.Light,
+    marginRight: 5,
   },
   createAccount: {
     fontFamily: Fonts.Bold,
+  },
+  googleImage: {
+    width: 18,
+    height: 18,
+    marginRight: 5,
   },
 });
